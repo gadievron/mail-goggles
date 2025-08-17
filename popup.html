@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="header">
+        <div class="icon">🤔</div>
+        <h1>Mail Goggles</h1>
+        <div class="subtitle">Think before you send</div>
+    </div>
+    
+    <div class="content">
+        <div id="status" class="status loading">
+            <div class="status-icon"></div>
+            <span>Initializing...</span>
+        </div>
+        
+        <div class="setting">
+            <div class="setting-header">
+                <span class="setting-icon">⚡</span>
+                <label>Enable Extension</label>
+            </div>
+            <div class="toggle-row">
+                <div class="toggle" id="enabled"></div>
+                <span class="toggle-label" id="enabledText">...</span>
+            </div>
+        </div>
+        
+        <div class="setting">
+            <div class="setting-header">
+                <span class="setting-icon">🌙</span>
+                <label>Night Mode Only</label>
+            </div>
+            <div class="toggle-row">
+                <div class="toggle" id="nightMode"></div>
+                <span class="toggle-label" id="nightText">...</span>
+            </div>
+            <div class="setting-description">
+                Only active between 10 PM and 8 AM
+            </div>
+        </div>
+        
+        <div class="setting">
+            <div class="setting-header">
+                <span class="setting-icon">🔢</span>
+                <label>Number of Problems</label>
+            </div>
+            <select id="numProblems">
+                <option value="1">1 problem</option>
+                <option value="2">2 problems</option>
+                <option value="3">3 problems</option>
+                <option value="4">4 problems</option>
+                <option value="5">5 problems</option>
+            </select>
+        </div>
+        
+        <div class="setting">
+            <div class="setting-header">
+                <span class="setting-icon">⏱</span>
+                <label>Time Limit</label>
+            </div>
+            <select id="timeLimit">
+                <option value="0">No time limit</option>
+                <option value="30">30 seconds</option>
+                <option value="60">1 minute</option>
+                <option value="120">2 minutes</option>
+                <option value="300">5 minutes</option>
+            </select>
+        </div>
+        
+        <div class="controls">
+            <button class="btn secondary" id="testBtn">Test</button>
+            <button class="btn secondary" id="resetBtn">Reset</button>
+        </div>
+        
+        <div class="debug" id="log">Debug log:<br></div>
+    </div>
+    
+    <div class="footer">
+        <div class="version">v4.2</div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

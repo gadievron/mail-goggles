@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Mail Goggles",
+  "version": "4.2.0",
+  "description": "Think before you send! Solve math problems before sending emails in Gmail.",
+  "author": "Mail Goggles Team",
+  
+  "permissions": [
+    "storage"
+  ],
+  
+  "host_permissions": [
+    "https://mail.google.com/*"
+  ],
+  
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Mail Goggles Settings"
+  },
+  
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  },
+  
+  "minimum_chrome_version": "88"
+}
